@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>img-zoom.js</title>
+  <link rel="stylesheet" type="text/css" href="src/zoom.css">
+<style type="text/css">
+  .test-box{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .test-box img{
+    max-width: 100%;
+  }
+</style> 
+</head>
+<body>
+<div class="test-box">
+  <img src="https://avatars3.githubusercontent.com/u/11366654?v=4&s=460" alt="">
+  <img src="test.png" alt="" data-src="">
+  <img src="https://pic4.zhimg.com/v2-030c9b78d93175e07ac631ba75f5e46f_r.jpg" alt="">
+</div>
+<script type="text/javascript" src="dist/img-zoom.js"></script>
+<script type="text/javascript">
+var zoom = null
+window.addEventListener('load', () => {
+  zoom = new ImgZoom(document.body, 'data-src')
+  console.log(zoom)
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.zoom-wrap{
+  padding-bottom: 10px;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  overflow: hidden;
+  -webkit-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+.zoom-wrap.is-active{
+  background-color: rgba(0,0,0,.1);
+  display: block;
+}
+.zoom-wrap .zoom-box{
+  height: 100%;
+  // overflow: auto;
+  box-sizing: border-box;
+}
+.zoom-wrap .zoom-view{
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+}
+
